@@ -78,3 +78,80 @@ int main()
 • Python:-
 arr=[10,6,45,28,6798054321]
 print("Reversed array: ", arr[::-1])
+
+4)Check if array is sorted.
+• C:-
+#include <stdio.h>
+int main() {
+    int n,flag=1;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    for(int i=0;i<n-1;i++) {
+        if(arr[i]>arr[i+1]) {
+            flag=0;
+            break;
+        }
+    }
+    if(flag)
+        printf("True");
+    else
+        printf("False");
+    return 0;
+}
+• Python:-
+arr=[1,2,3,5]
+flag=True
+for i in range(len(arr)-1):
+    if arr[i]>arr[i+1]:
+        flag=False
+        break
+print(flag)
+
+5)Sum of elements at even indices.
+• C:-
+#include <stdio.h>
+int main() {
+    int n,sum=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    for(int i=0;i<n;i+=2)
+        sum+=arr[i];
+    printf("%d",sum);
+    return 0;
+}
+• Python:-
+arr=[10,20,30,40,50]
+sum=0
+for i in range(0,len(arr),2):
+    sum+=arr[i]
+print(sum)
+
+6)Counting occurrence of each element.
+• C:-
+#include <stdio.h>
+int main() {
+    int n,x,count=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    scanf("%d",&x);
+    for(int i=0;i<n;i++) {
+        if(arr[i]==x)
+            count++;
+    }
+    printf("%d",count);
+    return 0;
+}
+• Python:-
+arr=[1,2,3,2,2,4]
+x=2
+count=0
+for i in arr:
+    if i==x:
+        count+=1
+print(count)
