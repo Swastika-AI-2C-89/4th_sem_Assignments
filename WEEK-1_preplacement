@@ -1,0 +1,80 @@
+1)Finding maximum and minimum from a given array.
+• C:-
+#include<stdio.h>
+int main()
+{
+   int arr= {10,256,8,57,2036};
+   int max=0, min=arr[0], i=0, n=5;
+   for (i=0;i<n;n++)
+   {
+      if (arr[i]>max)
+         max=arr[i];
+   }
+   for (i=0;i<n;n++)
+   {
+      if (arr[i]<min)
+         min=arr[i];
+   }
+   printf("Max= %d, Min=%d", max, min);
+   return 0;
+}
+• Python:-
+li= [10,8,57,2026,3]
+max, nin=0,li[0]
+for i in li:
+   if i>max:
+      max=i
+for i in li:
+   if i<min:
+      min=i
+print("Max= ", max,"Min= ", min)
+
+2)Counting number odd and even numbers in a given array.
+• C:-
+#include<stdio.h>
+int main()
+{
+   int arr= {10,256,8,57,2036};
+   int eve=0, odd=0, i=0, n=5;
+   for (i=0;i<n;n++)
+   {
+      if (arr[i]%2==0)
+         eve++;
+      else
+         odd++;
+   }
+   printf("Even= %d, Odd= %d", eve, odd);
+   return 0;
+}
+• Python:-
+li= [10,8,57,2026,3]
+eve, odd=0,0
+for i in li:
+   if i%2==0:
+      eve+=1
+   else:
+      odd+=1
+print("Even= ", eve,"Odd= ", odd)
+
+3)Reverse an array.
+• C:-
+#include<stdio.h>
+int main()
+{
+   int arr= {10,45,6,78,90};
+   int n=5, i=0;
+   int arr2[n];
+   for(i=0;i<n;i++)
+   {
+      arr2[i]= arr[n-i-1];
+   }
+   printf("Reversed array: ");
+   for(i=0;i<n;i++)
+   {
+      printf("%d ", arr2[i]);
+   }
+   return 0;
+}
+• Python:-
+arr=[10,6,45,28,6798054321]
+print("Reversed array: ", arr[::-1])
